@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+<body>
+    <h1 class="noice" style="font-size: 50px;"></h1>
+    <h1>Calculator</h1>
+    <label for="n1">Enter first number:</label><br>
+    <input type="number" id="n1" style="width: 50%; padding: 10px 0; margin: 20px 0;"><br>
+    <label for="n1">Enter second number:</label><br>
+    <input type="number" id="n2" style="width: 50%; padding: 10px 0; margin: 20px 0;"><br>
+    <button onclick="addButton()">Add</button>
+    <button onclick="subButton()">Subtract</button>
+    <button onclick="mulButton()">Multiply</button>
+    <button onclick="divButton()">Divide</button>
+    <!-- <button onclick="niceButton()">Noice</button> -->
+    <br>
+    <input type="text" class="ans" style="width: 50%; padding: 10px 0; margin: 20px 0;" value="" disabled>
+
+    <script>
+        function addButton()
+        {
+            var n1Node = document.querySelector("#n1");
+            var n1 = Number(n1Node.value);
+            
+            var n2Node = document.querySelector("#n2");
+            var n2 = Number(n2Node.value);
+            
+            var ansNode = document.querySelector(".ans");
+            ansNode.value = n1+n2;
+
+            check();
+        }
+        
+        function subButton()
+        {
+            var n1Node = document.querySelector("#n1");
+            var n1 = Number(n1Node.value);
+            
+            var n2Node = document.querySelector("#n2");
+            var n2 = Number(n2Node.value);
+            
+            var ansNode = document.querySelector(".ans");
+            ansNode.value = n1-n2;
+
+            check();
+
+        }
+        
+        function mulButton()
+        {
+            var n1Node = document.querySelector("#n1");
+            var n1 = Number(n1Node.value);
+            
+            var n2Node = document.querySelector("#n2");
+            var n2 = Number(n2Node.value);
+            
+            var ansNode = document.querySelector(".ans");
+            ansNode.value = n1*n2;
+
+            check();
+
+        }
+        
+        function divButton()
+        {
+            var n1Node = document.querySelector("#n1");
+            var n1 = Number(n1Node.value);
+            
+            var n2Node = document.querySelector("#n2");
+            var n2 = Number(n2Node.value);
+            
+            var ansNode = document.querySelector(".ans");
+            ansNode.value = n1/n2;
+
+            check();
+
+        }
+
+        // function niceButton()
+        // {
+        //     var ansNode = document.querySelector(".ans");
+        //     ansNode.value = 69;
+        // }
+
+        function check()
+        {   
+            var ansNode = document.querySelector(".ans");
+            var noiceNode = document.querySelector(".noice");
+            if(ansNode.value == 69)
+                noiceNode.innerText = "NOICE!";
+            else
+                noiceNode.innerText = "";
+        }
+    </script>
+</body>
+</html>
